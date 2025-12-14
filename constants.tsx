@@ -4,9 +4,9 @@ import React from 'react';
 
 export const BRAND = {
   name: 'DevPortfolio',
-  // Zde vložte URL vašeho loga (např. 'https://via.placeholder.com/50' nebo '/logo.png').
-  // Pokud necháte prázdné, zobrazí se výchozí ikona Code2.
-  logoUrl: '', 
+  // Zde vložte URL vašeho loga. 
+  // Soubory ze složky "public" se volají pomocí lomítka, např. "/logo.svg"
+  logoUrl: '/logo.svg', 
 };
 
 export const PROJECTS: Project[] = [
