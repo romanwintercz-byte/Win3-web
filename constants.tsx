@@ -15,7 +15,8 @@ export const PROJECTS: Project[] = [
     description: 'Komplexní systém pro malou firmu umožňující efektivní evidenci docházky a sledování odpracovaných hodin na projektech.',
     tags: ['React', 'Supabase', 'Vercel', 'Auth'],
     imageUrl: 'https://picsum.photos/800/600?random=1',
-    features: ['Reálný čas', 'Export do PDF/Excel', 'Role zaměstnanec/admin']
+    features: ['Reálný čas', 'Export do PDF/Excel', 'Role zaměstnanec/admin'],
+    demoUrl: 'https://win3-chytr-doch-zka-demo.vercel.app/'
   },
   {
     id: 'mileage',

@@ -48,10 +48,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <Github className="w-4 h-4" />
             <span>Kód</span>
           </button>
-          <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors">
-            <ExternalLink className="w-4 h-4" />
-            <span>Demo</span>
-          </button>
+          
+          {project.demoUrl ? (
+            <a 
+              href={project.demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              <span>Demo</span>
+            </a>
+          ) : (
+            <button 
+              disabled 
+              className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-slate-700/50 text-slate-500 cursor-not-allowed rounded-lg text-sm font-medium"
+            >
+              <ExternalLink className="w-4 h-4" />
+              <span>Demo</span>
+            </button>
+          )}
         </div>
       </div>
     </div>
