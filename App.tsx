@@ -6,6 +6,7 @@ import { Code2, Mail, Github, Linkedin, ChevronDown, CheckCircle2 } from 'lucide
 
 const App: React.FC = () => {
   const [currentYear] = useState(new Date().getFullYear());
+  const [logoError, setLogoError] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 overflow-x-hidden selection:bg-blue-500/30">
@@ -14,8 +15,13 @@ const App: React.FC = () => {
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xl font-bold text-white">
-            {BRAND.logoUrl ? (
-              <img src={BRAND.logoUrl} alt={BRAND.name} className="h-10 w-auto rounded-lg object-contain" />
+            {BRAND.logoUrl && !logoError ? (
+              <img 
+                src={BRAND.logoUrl} 
+                alt={BRAND.name} 
+                className="h-10 w-auto rounded-lg object-contain bg-white/5" 
+                onError={() => setLogoError(true)}
+              />
             ) : (
               <Code2 className="w-8 h-8 text-blue-500" />
             )}
@@ -33,7 +39,7 @@ const App: React.FC = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6" id="about">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
            <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
@@ -126,7 +132,6 @@ const App: React.FC = () => {
             {SERVICES.map((service, idx) => (
               <div key={service.id} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:bg-slate-800 transition-colors">
                 <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center text-blue-400 mb-6">
-                   {/* Icon mapping would ideally be dynamic, simplifying here for the single file requirement */}
                    <span className="text-xl font-bold">{idx + 1}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
