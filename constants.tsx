@@ -1,11 +1,11 @@
-import { Project, Service } from './types';
+import type { Project, Service } from './types';
 import { Layout, Database, Server, Smartphone, BarChart3, Clock, Map, Target } from 'lucide-react';
 import React from 'react';
 
 export const BRAND = {
   name: 'DevPortfolio',
-  // Pro jistotu jsem logo vložil přímo do kódu (Data URI), aby se zobrazilo okamžitě.
-  // Až budete mít vlastní soubor v "public" složce, změňte tento řádek na: logoUrl: '/"C:\Users\HP\Desktop\Logo\Win3D.png"
+  logoUrl: '/logo.svg',
+};
 
 export const PROJECTS: Project[] = [
   {
