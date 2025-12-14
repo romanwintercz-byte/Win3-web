@@ -4,7 +4,8 @@ import React from 'react';
 
 export const BRAND = {
   name: 'DevPortfolio',
-  logoUrl: '/logo.svg',
+  // Nyní aplikace hledá soubor logo.jpg ve složce public
+  logoUrl: '/logo.jpg',
 };
 
 export const PROJECTS: Project[] = [
