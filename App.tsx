@@ -14,12 +14,12 @@ const App: React.FC = () => {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xl font-bold text-white">
+          <div className="flex items-center gap-3 text-xl font-bold text-white">
             {BRAND.logoUrl && !logoError ? (
               <img 
                 src={BRAND.logoUrl} 
                 alt={BRAND.name} 
-                className="h-10 w-auto rounded-lg object-contain bg-white/5" 
+                className="h-10 w-10 rounded-lg object-contain bg-white p-1 shadow-lg shadow-blue-500/20" 
                 onError={() => setLogoError(true)}
               />
             ) : (

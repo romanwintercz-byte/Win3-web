@@ -4,9 +4,9 @@ import React from 'react';
 
 export const BRAND = {
   name: 'DevPortfolio',
-  // Zde vložte URL vašeho loga. 
-  // Soubory ze složky "public" se volají pomocí lomítka, např. "/logo.svg"
-  logoUrl: '/logo.svg', 
+  // Pro jistotu jsem logo vložil přímo do kódu (Data URI), aby se zobrazilo okamžitě.
+  // Až budete mít vlastní soubor v "public" složce, změňte tento řádek na: logoUrl: '/moje-logo.png'
+  logoUrl: 'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20fill%3D%22none%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2220%22%20fill%3D%22%232563eb%22%20%2F%3E%3Cpath%20d%3D%22M30%2035%20L50%2075%20L70%2035%22%20stroke%3D%22white%22%20stroke-width%3D%2210%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2225%22%20r%3D%228%22%20fill%3D%22white%22%20%2F%3E%3C%2Fsvg%3E',
 };
 
 export const PROJECTS: Project[] = [
