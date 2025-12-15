@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PROJECTS, SERVICES, TECH_STACK, BRAND } from './constants';
 import { ProjectCard } from './components/ProjectCard';
 import { AiConsultant } from './components/AiConsultant';
-import { Code2, Mail, Github, Linkedin, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { Code2, Mail, Linkedin, ChevronDown, CheckCircle2 } from 'lucide-react';
 
 const App: React.FC = () => {
   const [currentYear] = useState(new Date().getFullYear());
@@ -109,9 +109,6 @@ const App: React.FC = () => {
                 Ukázka aplikací, které reálně pomáhají firmám a uživatelům šetřit čas a peníze.
               </p>
             </div>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors">
-              Zobrazit GitHub <Github className="w-4 h-4" />
-            </a>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,9 +173,6 @@ const App: React.FC = () => {
                 <div className="flex gap-4 justify-center items-center">
                     <a href="#" className="p-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-colors border border-slate-600">
                         <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="p-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-colors border border-slate-600">
-                        <Github className="w-5 h-5" />
                     </a>
                 </div>
              </div>
