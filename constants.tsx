@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Supabase', 'Vercel', 'Auth'],
     imageUrl: 'https://picsum.photos/800/600?random=1',
     features: ['Reálný čas', 'Export do PDF/Excel', 'Role zaměstnanec/admin'],
-    demoUrl: 'https://win3-chytr-doch-zka-demo.vercel.app/'
+    demoUrl: 'https://win3-chytra-dochazka-demo.vercel.app/'
   },
   {
     id: 'mileage',
